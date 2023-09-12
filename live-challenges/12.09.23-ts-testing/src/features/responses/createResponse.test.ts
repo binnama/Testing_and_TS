@@ -1,13 +1,17 @@
+import { createResponses } from "./createResponse"
+import { Faker } from "./types"
+
 // TODO: Not implemented
 const fakerMock: Faker = {
-  id,
-  answer,
-  score,
-  category,
+  id: () => "1",
+  answer: () => "answer",
+  score: () => 1,
+  category: () => "one",
 }
 
 describe.only("Create responses", () => {
   it("should create response", () => {
+    const responses = createResponses({ count: 10, fakerMock })
     expect(responses.size).toBe(10)
   })
   it("should have correct data", () => {
@@ -21,5 +25,9 @@ describe.only("Create responses", () => {
     expect(firstProduct.id).toBe("response-initial")
     expect(products.size).toBe(11)
   })
-  it("should fail if no responses can be added", () => {})
+  it("should fail if no responses can be added", () => {
+    const initialResponses = new Map<string, Response> ([
+      
+    ])
+  })
 })

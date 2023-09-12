@@ -6,6 +6,16 @@ export type Response = {
   questionId: string
 }
 
+/*
+const response : Response = {
+  id: "",
+  answer: "",
+  score: 1,
+  category: "",
+  questionId: ""
+}
+*/
+
 export type Faker = {
   id: () => string
   score: () => number
@@ -26,8 +36,15 @@ export type CreateResponseParams = {
   count: number
   faker: Faker
 }
+/*
+const existingResponses : Map<String, response>([["response-id", response]])
 
-const createResponseParams: CreateResponseParams = {}
+const createResponseParams: CreateResponseParams = {
+  existingResponses,
+  count: 10,
+  faker
+}
+*/
 
 export type CreateResponses = (
   params: CreateResponseParams,
