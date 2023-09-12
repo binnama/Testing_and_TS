@@ -21,17 +21,17 @@ const getRandomId = () => {
 
 // TODO: Oppgave 1 - Not implemented
 const faker: Faker = {
-  id,
-  answer,
-  score,
-  category,
+  id: string,
+  answer: string,
+  score: number,
+  category: string,
 }
 
 // TODO: Oppgave 1 - Not implemented
 const createResponses: CreateResponses = ({
-  existingResponses,
-  count,
-  faker,
+  existingResponses?: Map<string, Response>
+  count: number,
+  faker: Faker,
 }) => {
   return responses
 }
